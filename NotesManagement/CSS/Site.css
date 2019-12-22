@@ -1,0 +1,70 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+#divLogin {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    margin: -50px 0px 0px -50px;
+    z-index: 99999999999;
+}
+
+#divNotes {
+    padding: 0px;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+    z-index: 99999999999;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #3498db;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+#divNotes .list-group-item{
+    border-radius: 0px;
+}
+
+.deleteNote {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}

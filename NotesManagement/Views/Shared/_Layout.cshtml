@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title  Notes Management</title>
+    <link rel="shortcut icon" href="@Url.Content("~/CSS/images/favicon.ico")" />
+    @Styles.Render("~/Content/css")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+    <div id="loading">
+
+    </div>
+
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        <div class="navbar navbar-default navbar-fixed-top">
+
+            <div class="navbar-collapse pull-left">
+                <ul class="nav navbar-nav">
+                    <li> <a href="javascript:void(0)"> <strong>@HttpContext.Current.User.Identity.Name</strong>  Notes </a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse pull-right">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Logout", "LogOut", "Login")</li>
+                </ul>
+            </div>
+        </div>
+    }
+    <div class="body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/Common")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

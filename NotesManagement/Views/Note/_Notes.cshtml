@@ -1,0 +1,26 @@
+﻿@using NotesManagement.Data.Models
+@model List<Note>
+
+
+<div class="list-group">
+    @foreach (Note note in Model)
+    {
+        <a href="javascript:void(0)" class="list-group-item list-group-item-action">
+           
+            <div class="d-flex w-100 justify-content-between">
+
+                <div type="button" class="text-muted lnkEditNote pull-left margin-right-10" data-id="@note.NoteID">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </div>
+
+                <label class="mb-1">@note.Title</label>
+
+                <div type="button" class="text-muted close deleteNote" data-id="@note.NoteID" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </div>
+               
+            </div>
+            <p class="mb-1">@note.Body</p>
+        </a>
+    }
+</div>
