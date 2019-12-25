@@ -10,5 +10,5 @@ Default Credentials:
 Username: Jaydeep
 Password: 12345678
 
-Username: Jay
+Username: Jayd
 Password: 12345678
